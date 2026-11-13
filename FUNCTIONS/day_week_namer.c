@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+// 1. Function Prototype (tells the compiler the function exists)
+void printDayOfWeek(int day);
+
+int main() {
+    int day;
+
+    printf("Enter a number (1-7): ");
+    scanf("%d", &day);
+
+    // 2. Function Call (passes the user's input into the function)
+    printDayOfWeek(day);
+
+    return 0;
+}
+
+// 3. Function Definition (contains the actual switch logic)
+void printDayOfWeek(int day) {
+    switch (day) {
+        case 1:
+            printf("Day 1 is Monday\n");
+            break;
+        case 2:
+            printf("Day 2 is Tuesday\n");
+            break;
+        case 3:
+            printf("Day 3 is Wednesday\n");
+            break;
+        case 4:
+            printf("Day 4 is Thursday\n");
+            break;
+        case 5:
+            printf("Day 5 is Friday\n");
+            break;
+        case 6:
+            printf("Day 6 is Saturday\n");
+            break;
+        case 7:
+            printf("Day 7 is Sunday\n");
+            break;
+        default:
+            printf("Error: Invalid number! Please enter a value between 1 and 7.\n");
+    }
+}
